@@ -65,10 +65,6 @@ let boosterTTL = null,
     numberOfTries = 3,
     currentServer = 0;
 
-onUpdates(msg => {
-    if (!updatesEv && !disableUpdates)
-        updatesEv = msg;
-
     con(msg, "white", "Red");
 });
 
