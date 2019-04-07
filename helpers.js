@@ -101,26 +101,6 @@ rl.questionAsync = (question) => {
     });
 };
 
-function checkUpdates() {
-    GitCUpdate.files(['package.json'], (err, results) => {
-        if (err) return;
-        results.forEach(file => {
-            let c = file.contents.toString();
-            if (c[0] === "{") {
-                let data = JSON.parse(c);
-
-                let msg = (data.version > pJson.version) ? "Было выпущено новое обновление! -> github.com/cursedseal/VCoinX \t[" + (data.version + "/" + pJson.version) + "]" :
-                    false;
-
-                if (msg) {
-                    if (onUpdatesCB) onUpdatesCB(msg);
-                    else con(msg, "white", "Red");
-                }
-            }
-        });
-    });
-}
-
 checkUpdateTTL = setInterval(checkUpdates, 1e7);
 checkUpdates();
 
