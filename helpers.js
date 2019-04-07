@@ -101,9 +101,6 @@ rl.questionAsync = (question) => {
     });
 };
 
-checkUpdateTTL = setInterval(checkUpdates, 1e7);
-checkUpdates();
-
 function rand(min, max) {
     if (max === undefined)
         max = min;
