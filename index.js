@@ -65,9 +65,6 @@ let boosterTTL = null,
     numberOfTries = 3,
     currentServer = 0;
 
-    con(msg, "white", "Red");
-});
-
 let vConinWS = new VCoinWS();
 
 
