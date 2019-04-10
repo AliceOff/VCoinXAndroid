@@ -254,7 +254,7 @@ vCoinWS.onTransfer(async (id, score) => {
   boosterTTL = setInterval(() => {
     if (rand(0, 5) > 3) vCoinWS.click()
   }, 5e2)
-})
+
 vCoinWS.onGroupLoaded((groupInfo, groupData) => {
   if (groupData.name && groupInfo.place && groupInfo.score) {
     con('Загружена информация о группе ' + groupData.name)
